@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoberOwl.MainPage">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24,40,24,24" CornerRadius="0">
+            <StackLayout>
+            <Label Text="How are you doing?" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Here is your summary:" FontSize="24" TextColor="White" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+        <ScrollView>
+            <StackLayout>
+        <Grid Padding="30,10,30,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Text="Your Streak🔥:" FontSize="Large" />
+            <Label x:Name="streaknum" Grid.Row="0" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="End" />
+            <Label Grid.Row="1" Text="Highest Streak: " FontSize="Large" />
+            <Label x:Name="maxstreaknum" Grid.Row="1" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="End" />
+            <Label Grid.Row="2" Text="Money Saved: " FontSize="Large" />
+            <Label x:Name="moneynum" Grid.Row="2" TextColor="LightSeaGreen" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="End" />
+            <Label Grid.Row="3" Grid.Column="0" Text="Daily Cost:" FontSize="Large"/>
+            <Label Grid.Row="3" Grid.Column="1"/>
+
+        </Grid>
+        <StackLayout>
+        <Button x:Name="logbutton" Text="I Saved Me Some MONEY 🤑🤑🤑" TextColor="White" FontAttributes="Bold" Background="#007aff" Margin="20, 5, 20, 5" CornerRadius="10" Clicked="SaveMoney"/>
+
+        <Button x:Name="updatepricebutton" Text="Set New Daily Price" TextColor="#007aff" FontAttributes="Bold" Background="#f2f2f7" Margin="20, 5, 20, 5" CornerRadius="10" Clicked="UpdatePrice"/>
+
+        <Button Text="DEBUG: Clear Data" TextColor="White" FontAttributes="Bold" Background="#ff3b30" Margin="20, 5, 20, 5" CornerRadius="10" Clicked="ClearData"/>
+        <Button Text="DEBUG: New Day" TextColor="White" FontAttributes="Bold" Background="#ff3b30" Margin="20, 5, 20, 5" CornerRadius="10" Clicked="SetDirtyDay"/>
+
+        </StackLayout>
+    </StackLayout>
+    </ScrollView>
+    </StackLayout>
+
+</ContentPage>
+
