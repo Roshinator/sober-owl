@@ -98,8 +98,8 @@ namespace SoberOwl
         }
         void UpdateStreakNum()
         {
-            streaknum.Text = Data.Streak.ToString() + (Data.Streak > 1 ? " Days" : " Day");
-            maxstreaknum.Text = Data.HighestStreak.ToString() + (Data.Streak > 1 ? " Days" : " Day");
+            streaknum.Text = Data.Streak.ToString() + (Data.Streak != 1 ? " Days" : " Day");
+            maxstreaknum.Text = Data.HighestStreak.ToString() + (Data.HighestStreak != 1 ? " Days" : " Day");
         }
 
         void Save()
